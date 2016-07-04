@@ -522,6 +522,7 @@ func installLinters() {
 		names = append(names, name)
 		targets = append(targets, target)
 	}
+	sort.Strings(names)
 	namesStr := strings.Join(names, "\n  ")
 	fmt.Printf("Installing:\n  %s\n", namesStr)
 	err := installLintersWithOneCommand(targets)
